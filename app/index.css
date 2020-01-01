@@ -1,15 +1,57 @@
-.container {
-  margin: 30px;
-  font-size: 30px;
+html,
+body,
+#app {
+  margin: 0;
+  height: 100%;
+  width: 100%;
 }
 
-button {
-  border: 1px solid #222;
-  border-radius: 5px;
-  padding: 10px;
-  background: #222;
-  color: #fff;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  font-size: 18px;
+}
+
+.lg {
+  font-size: 24px;
   font-weight: bold;
-  font-size: 20px;
-  margin: 5px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.heading {
+  font-size: 28px;
+}
+.btn {
+  padding: 10px;
+  text-decoration: uppercase;
+  letter-spacing: 0.15em;
+  border-radius: 4px;
+  margin-right: 20px;
+  border: none;
+  font-size: 18px;
+  display: inline-block;
+  line-height: 1.2rem;
+  text-decoration: none;
+  max-width: 200px;
+}
+
+.btn-text {
+  padding-right: 10px;
+}
+.dark-btn {
+  color: #e6e6e6;
+  background: #141414;
+}
+
+.light-btn {
+  color: #141414;
+  background: #e6e6e6;
+}
+
+.white-btn {
+  color: #141414;
+  background: #fff;
 }

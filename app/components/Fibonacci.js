@@ -1,17 +1,21 @@
 import React from "react";
 import { calculateFib, suffixOf } from "../utils/math";
+import { FaChevronCircleRight } from "react-icons/fa";
 
 export default function NthFib({ count, increment }) {
   const fib = calculateFib(count);
 
   return (
-    <div className="container">
-      <h2>Nth Fib</h2>
+    <div>
+      <h2>Fibonacci</h2>
       <p>
-        The <b>{suffixOf(count)}</b> number in the fibonacci sequence is{" "}
-        <b>{fib}</b>.
+        The <span className="lg">{suffixOf(count)}</span> number in the
+        Fibonacci sequence is <span className="lg">{fib}</span>.
       </p>
-      <button onClick={increment}>Next number</button>
+      <button className="btn light-btn" onClick={increment}>
+        <span className="btn-text">Next number</span>
+        <FaChevronCircleRight color="rgb(20, 20, 20)" size={16} />
+      </button>
     </div>
   );
 }

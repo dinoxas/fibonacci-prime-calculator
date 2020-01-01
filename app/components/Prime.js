@@ -1,16 +1,21 @@
 import React from "react";
 import { calculatePrime, suffixOf } from "../utils/math";
+import { FaChevronCircleRight } from "react-icons/fa";
 
 export default function NthPrime({ count, increment }) {
   const prime = calculatePrime(count);
 
   return (
-    <div className="container">
-      <h2>Nth Prime</h2>
+    <div>
+      <h2>Prime</h2>
       <p>
-        The <b>{suffixOf(count)}</b> prime number is <b>{prime}</b>.
+        The <span className="lg">{suffixOf(count)}</span> Prime number is{" "}
+        <span className="lg">{prime}</span>.
       </p>
-      <button onClick={increment}>Next prime</button>
+      <button className="btn light-btn" onClick={increment}>
+        <span className="btn-text">Next prime</span>
+        <FaChevronCircleRight color="rgb(20, 20, 20)" size={16} />
+      </button>
     </div>
   );
 }
