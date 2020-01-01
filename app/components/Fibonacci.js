@@ -2,8 +2,8 @@ import React from "react";
 import { calculateFib, suffixOf } from "../utils/math";
 import { FaChevronCircleRight } from "react-icons/fa";
 
-export default function NthFib({ count, increment }) {
-  const fib = calculateFib(count);
+function Fibonacci({ count, increment }) {
+  const fib = React.useMemo(() => calculateFib(count), [count]);
 
   return (
     <div>
@@ -19,3 +19,6 @@ export default function NthFib({ count, increment }) {
     </div>
   );
 }
+
+// skip re-rendering if props have not changed
+export default React.memo(Fibonacci);

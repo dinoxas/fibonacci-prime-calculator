@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import NthFib from "./components/Fibonacci";
-import NthPrime from "./components/Prime";
+import Fibonacci from "./components/Fibonacci";
+import Prime from "./components/Prime";
 import { FaPlusCircle, FaSync } from "react-icons/fa";
 import "./index.css";
 
@@ -34,12 +34,9 @@ function App() {
           <FaSync color="rgb(20, 20, 20)" size={20} />
         </button>
         <hr />
-        <NthFib count={fibCount} increment={() => setFibCount(c => c + 1)} />
+        <Fibonacci count={fibCount} increment={() => setFibCount(c => c + 1)} />
         <hr />
-        <NthPrime
-          count={primeCount}
-          increment={() => setPrimeCount(c => c + 1)}
-        />
+        <Prime count={primeCount} increment={() => setPrimeCount(c => c + 1)} />
       </div>
     </React.Fragment>
   );

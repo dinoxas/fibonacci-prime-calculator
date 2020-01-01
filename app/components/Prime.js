@@ -2,8 +2,8 @@ import React from "react";
 import { calculatePrime, suffixOf } from "../utils/math";
 import { FaChevronCircleRight } from "react-icons/fa";
 
-export default function NthPrime({ count, increment }) {
-  const prime = calculatePrime(count);
+export default function Prime({ count, increment }) {
+  const prime = React.useMemo(() => calculatePrime(count), [count]);
 
   return (
     <div>
