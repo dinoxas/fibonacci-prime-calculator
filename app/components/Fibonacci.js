@@ -6,7 +6,7 @@ function Fibonacci({ count, increment }) {
   const fib = React.useMemo(() => calculateFib(count), [count]);
 
   return (
-    <div className="hero-body content">
+    <div className="content">
       <h2 className="title is-4">Fibonacci</h2>
       <p>
         The <span className="is-size-4">{suffixOf(count)}</span> number in the

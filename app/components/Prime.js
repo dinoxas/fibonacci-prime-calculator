@@ -6,7 +6,7 @@ export default function Prime({ count, increment }) {
   const prime = React.useMemo(() => calculatePrime(count), [count]);
 
   return (
-    <div className="hero-body content">
+    <div className="content">
       <h2 className="title is-4">Prime</h2>
       <p>
         The <span className="is-size-4">{suffixOf(count)}</span> Prime number is{" "}

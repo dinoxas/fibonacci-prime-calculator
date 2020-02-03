@@ -27,10 +27,10 @@ function App() {
             <h1 className="title is-3">
               Fibonacci Sequence &amp; Prime Number Calculator
             </h1>
-            <div class="buttons">
+            <div className="buttons">
               <button className="button is-medium" onClick={add10}>
                 <span>Add 10</span>
-                <span class="icon is-small">
+                <span className="icon is-small">
                   <FaPlusCircle size={18} />
                 </span>
               </button>
@@ -43,10 +43,17 @@ function App() {
             </div>
           </div>
         </div>
+        <div className="hero-body">
+          <Fibonacci
+            count={fibCount}
+            increment={() => setFibCount(c => c + 1)}
+          />
 
-        <Fibonacci count={fibCount} increment={() => setFibCount(c => c + 1)} />
-
-        <Prime count={primeCount} increment={() => setPrimeCount(c => c + 1)} />
+          <Prime
+            count={primeCount}
+            increment={() => setPrimeCount(c => c + 1)}
+          />
+        </div>
       </div>
     </React.Fragment>
   );
