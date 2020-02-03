@@ -6,15 +6,17 @@ function Fibonacci({ count, increment }) {
   const fib = React.useMemo(() => calculateFib(count), [count]);
 
   return (
-    <div>
-      <h2>Fibonacci</h2>
+    <div className="hero-body content">
+      <h2 className="title is-4">Fibonacci</h2>
       <p>
-        The <span className="lg">{suffixOf(count)}</span> number in the
-        Fibonacci sequence is <span className="lg">{fib}</span>.
+        The <span className="is-size-4">{suffixOf(count)}</span> number in the
+        Fibonacci sequence is <span className="is-size-4">{fib}</span>.
       </p>
-      <button className="btn light-btn" onClick={increment}>
-        <span className="btn-text">Next number</span>
-        <FaChevronCircleRight color="rgb(20, 20, 20)" size={16} />
+      <button className="button" onClick={increment}>
+        <span>Next</span>
+        <span className="icon">
+          <FaChevronCircleRight color="rgb(20, 20, 20)" size={16} />
+        </span>
       </button>
     </div>
   );

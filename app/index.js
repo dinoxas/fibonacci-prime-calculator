@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Fibonacci from "./components/Fibonacci";
 import Prime from "./components/Prime";
-import { FaPlusCircle, FaSync } from "react-icons/fa";
-import "./index.css";
+import { FaPlusCircle, FaSync, FaGithub } from "react-icons/fa";
+import "bulma/css/bulma.css";
 
 function App() {
   const [fibCount, setFibCount] = React.useState(1);
@@ -21,21 +21,31 @@ function App() {
 
   return (
     <React.Fragment>
-      <div className="container">
-        <h1 className="heading">
-          Fibonacci Sequence &amp; Prime Number Calculator
-        </h1>
-        <button className="btn dark-btn" onClick={add10}>
-          <span className="btn-text">Add 10</span>
-          <FaPlusCircle color="rgb(255,255,255)" size={20} />
-        </button>
-        <button className="btn light-btn" onClick={handleReset}>
-          <span className="btn-text">Reset</span>
-          <FaSync color="rgb(20, 20, 20)" size={20} />
-        </button>
-        <hr />
+      <div className="">
+        <div className="hero is-light">
+          <div className="hero-body">
+            <h1 className="title is-3">
+              Fibonacci Sequence &amp; Prime Number Calculator
+            </h1>
+            <div class="buttons">
+              <button className="button is-medium" onClick={add10}>
+                <span>Add 10</span>
+                <span class="icon is-small">
+                  <FaPlusCircle size={18} />
+                </span>
+              </button>
+              <button className="button is-medium" onClick={handleReset}>
+                <span>Reset</span>
+                <span className="icon">
+                  <FaSync color="rgb(20, 20, 20)" size={18} />
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
         <Fibonacci count={fibCount} increment={() => setFibCount(c => c + 1)} />
-        <hr />
+
         <Prime count={primeCount} increment={() => setPrimeCount(c => c + 1)} />
       </div>
     </React.Fragment>
