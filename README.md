@@ -13,4 +13,5 @@ Note: Open the console or use the Redux DevTools to see the current action and s
 
 * [React](https://reactjs.org/) - The JavaScript library used
 * [Redux](https://redux.js.org/) - State container for the app
+* [React Hooks](https://reactjs.org/docs/hooks-intro.html) - For creating and changing state
 * [Bulma](https://bulma.io/) - Used to style the UI
