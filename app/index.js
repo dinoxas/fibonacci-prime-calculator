@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Fibonacci from "./components/Fibonacci";
 import Prime from "./components/Prime";
-import { FaPlusCircle, FaSync, FaGithub } from "react-icons/fa";
+import Header from "./components/Header";
+import { FaPlusCircle, FaSync } from "react-icons/fa";
 import "bulma/css/bulma.css";
 
 function App() {
@@ -21,41 +22,43 @@ function App() {
 
   return (
     <React.Fragment>
-      <div>
-        <div className="hero is-primary">
-          <div className="hero-body">
-            <h1 className="title is-3 has-text-centered">
-              Fibonacci Sequence &amp; Prime Number Calculator
-            </h1>
-          </div>
-        </div>
+      <Header />
 
-        <div className="hero-body">
+      <div className="container">
+        <div className="column">
           <div className="buttons">
-            <button className="button is-medium" onClick={add10}>
+            <button
+              className="button is-medium is-link is-light"
+              onClick={add10}
+            >
               <span>Add 10</span>
               <span className="icon is-small">
                 <FaPlusCircle size={18} />
               </span>
             </button>
-            <button className="button is-medium" onClick={handleReset}>
+            <button
+              className="button is-medium is-danger is-light"
+              onClick={handleReset}
+            >
               <span>Reset</span>
               <span className="icon">
-                <FaSync color="rgb(20, 20, 20)" size={18} />
+                <FaSync size={18} />
               </span>
             </button>
           </div>
         </div>
-        <div className="hero-body">
-          <Fibonacci
-            count={fibCount}
-            increment={() => setFibCount(c => c + 1)}
-          />
+        <div className="container">
+          <div className="column">
+            <Fibonacci
+              count={fibCount}
+              increment={() => setFibCount(c => c + 1)}
+            />
 
-          <Prime
-            count={primeCount}
-            increment={() => setPrimeCount(c => c + 1)}
-          />
+            <Prime
+              count={primeCount}
+              increment={() => setPrimeCount(c => c + 1)}
+            />
+          </div>
         </div>
       </div>
     </React.Fragment>

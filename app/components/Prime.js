@@ -13,10 +13,10 @@ export default function Prime({ count, increment }) {
         <span className="is-size-4">{prime}</span>.
       </p>
 
-      <button className="button" onClick={increment}>
+      <button className="button is-link" onClick={increment}>
         <span>Next</span>
         <span className="icon">
-          <FaChevronCircleRight color="rgb(20, 20, 20)" size={16} />
+          <FaChevronCircleRight color="#fff" size={16} />
         </span>
       </button>
     </div>
